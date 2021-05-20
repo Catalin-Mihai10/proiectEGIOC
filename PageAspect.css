@@ -1,0 +1,331 @@
+html,body {
+	width:100%;
+	height:100%;
+	margin:0;
+	background-color: rgba(81,113,165,1);
+}
+
+a {
+	text-decoration: none;
+	background-image: linear-gradient(45deg, rgba(232, 193, 197, 1),  rgba(144, 85, 162, 1));
+	background-size:100%;
+	background-repeat: repeat;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	-moz-background-clip: text;
+	position: relative;
+}
+
+a::after{
+	content:'';
+	position: absolute;
+	width:100%;
+	height: 0.175rem;
+	left:0;
+	bottom:0;
+	background-image:  linear-gradient(135deg, rgba(201, 137, 134, 1), rgba(232,193,197, 1));
+}
+
+a::after{
+	transform: scale(0, 1);
+	transition: transform 0.3s ease;
+}
+
+a:hover::after{
+	transform: scale(1, 1);
+}
+
+a:hover{
+	text-decoration: underline!important;
+	background-image: linear-gradient(135deg, rgba(201, 137, 134, 1), rgba(232,193,197, 1));
+	cursor: pointer;
+}
+
+#gameContainer{
+	width: 85%;
+	height:100%;
+	margin:0;
+	position:absolute;
+	left:7%;
+	right:7%;
+}
+
+/* The main gameView*/
+#canvasSurface{
+	width:100%;
+	height:100%;
+	margin:0;
+	z-index:0;
+	position: absolute;
+}
+
+p{
+	position: absolute;
+	color: white;
+	z-index:2;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	right:0.2%;
+	top:5px;
+}
+
+/* the list of changeables eg: Rate of obstacle generation and Number of items*/
+#RateOfGeneration{
+	position: absolute;
+	z-index:2;
+	right:165px;
+	top:50px;
+}
+
+#NumberOfObstacles{
+	position: absolute;
+	z-index:2;
+	right:165px;
+	top:115px;
+}
+
+#p1{
+	position: absolute;
+	color: white;
+	z-index:2;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	right:1.75%;
+	top:65px;
+}
+
+ul{
+	 list-style-type: none;
+}
+
+/*Pagina de start*/
+#PaginaDeStart{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	position: inherit;
+	z-index: 3;
+	background-image: linear-gradient( rgba(81, 113, 165, 0.5),  rgba(152, 185, 171, 0.2));
+}
+
+.tematicaSiReguli{
+	width:100%;
+	height:inherit;
+	font-size:30px;
+	text-align: center;
+	color:white;
+	z-index: 3;
+}
+
+.t{
+	width: 100%;
+	position: absolute;
+	top:180px;
+	text-align: center;
+	z-index: 3;
+}
+.t1{
+	width: 100%;
+	position: absolute;
+	top:260px;
+	text-align: center;
+	z-index: 3;
+}
+
+#tematica{
+	width:100%;
+	height: 33.3333%;
+	font-family: 'Roboto', sans-serif;
+	display: block;
+	z-index: 3;
+}
+
+#Reguli{
+	width:100%;
+	height: 66.6666%;
+	display: block;
+	text-align: left;
+	font-family: 'Roboto', sans-serif;
+	z-index: 3;
+}
+
+#box1{
+	width: 100%;
+	height: 80%;
+	display: block;
+	z-index: 3;
+}
+
+.r1{
+	z-index: 3;
+	position: relative;
+	top:60px;
+}
+
+.r{
+	z-index: 3;
+	position: relative;
+	top:80px;
+}
+
+#box2{
+	width: 100%;
+	height: 20%;
+	display: block;
+	z-index: 3;
+}
+
+#Start{
+	position: relative;
+	top:25%;
+	left:47%;
+	right: 47%;
+	bottom:25%;
+	border: 1px solid;
+	background:none;
+	color: white;
+	padding: 20px 40px;
+	border-radius: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	cursor: pointer;
+	text-align: center;
+	transition: 0.8s;
+	overflow:hidden;
+}
+
+#Start:hover{
+	color:  rgba(238, 243, 106, 1);
+	background-color: rgba(255, 255, 255, 0.6);;
+}
+
+#Start:focus{
+	box-shadow: 0px 0px 0px 1px rgba(238, 243, 106, 0.5);
+	animation: anim-shadow 0.2s forwards;
+}
+
+@keyframes anim-shadow{
+	100%{
+		box-shadow: 0px 0px 2px 5px rgba(238, 243, 106, 0.5);
+	}
+}
+
+/*Pagina cand ai pierdut*/
+#PaginaLose{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	position: inherit;
+	z-index: 3;
+	background-image: linear-gradient( rgba(81, 113, 165, 0.5),  rgba(152, 185, 171, 0.2));
+	display: none;
+}
+#text{
+	width: inherit;
+	height: 600px;
+	position: absolute;
+	text-align: center;
+	top:80px;
+	font-size:200px;
+	font-family: 'Roboto', sans-serif;
+	color:white;
+}
+
+#RestartWhenLose{
+	position: absolute;
+	border:1px solid;
+	background: none;	
+	right: 50%;
+	left:45%;
+
+	top:80%;
+	padding: 20px 40px;
+	color:white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin: 10px;
+	text-align: center;
+	transition: 0.8s;
+	overflow:hidden;
+}
+
+#RestartWhenLose:hover{
+	color:  rgba(238, 243, 106, 1);
+	background-color: rgba(255, 255, 255, 0.6);;
+}
+
+#RestartWhenLose:focus{
+	box-shadow: 0px 0px 0px 1px rgba(238, 243, 106, 0.5);
+	animation: anim-shadow 0.2s forwards;
+}
+
+/*Pagina cand ai castigat*/
+#PaginaWin{
+	width: 100%;
+	height: 100%;
+	margin:0;
+	position: inherit;
+	z-index: 3;
+	background-image: linear-gradient( rgba(81, 113, 165, 0.5),  rgba(152, 185, 171, 0.2));
+	display: none;
+}
+#text1{
+	width: inherit;
+	height: 600px;
+	position: absolute;
+	text-align: center;
+	top:80px;
+	font-size:200px;
+	font-family: 'Roboto', sans-serif;
+	color:white;
+}
+
+#RestartWhenWin{
+	position: absolute;
+	border:1px solid;
+	background: none;	
+	right: 50%;
+	left:45%;
+
+	top:80%;
+	padding: 20px 40px;
+	color:white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	border-radius: 20px;
+	cursor: pointer;
+	margin: 10px;
+	text-align: center;
+	transition: 0.8s;
+	overflow:hidden;
+}
+
+#RestartWhenWin:hover{
+	color:  rgba(238, 243, 106, 1);
+	background-color: rgba(255, 255, 255, 0.6);;
+}
+
+#RestartWhenWin:focus{
+	box-shadow: 0px 0px 0px 1px rgba(238, 243, 106, 0.5);
+	animation: anim-shadow 0.2s forwards;
+}
+
+
+/*Media queries*/
+@media screen and (max-width: 1280px) {
+ #Start, #RestartWhenLose, #RestartWhenWin {
+    left:45%;
+    right: 45%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+@media screen and (max-width: 1280px) and (max-height: 800px){
+	.tematicaSiReguli{
+		font-size: 25px;
+	}
+}

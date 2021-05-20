@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pagina Principala</title>
+</head>
+<body >
+	<div id="gameContainer">
+		<canvas id ="canvasSurface" width:auto height:auto></canvas>
+		<div id="PaginaDeStart">
+				<div class="tematicaSiReguli">
+					<div id="tematica">
+					<div class="t">Tema aplicatiei interactive este reprezentata de un joc de tip platformer.</div>
+					<div class="t1">Tematica este inspirata din jocul <a href="https://store.steampowered.com/app/1229380/Everhood/">Everhood</a>.</div>
+					</div>
+					<div id="Reguli">
+					<div id="box1">
+					<div class="r1">Reguli:</div>
+				   	<div class="r">1. Daca bara de viata din coltul stanga sus ajunge la 0, jucatorul a pierdut.</div>
+				   	<div class="r">2. Jucatorul poate modifica la cate frame-uri se genereaza un obiect si numarul acestora prin cele 2 slide-uri din coltul dreapta sus. (default 1 obstacol se genereaza la fiecare 30 de frame-uri.)</div>
+				   	<div class="r">3. Jucatorul poate misca caracterul prin apasarea tastelor "a" pentru a muta caracterul la stanga si respectiv "d" pentru a muta caracterul la dreapta.</div>
+				   	<div class="r">4. Daca jucatorul reuseste sa se fereasca de toate obstacolele acesta castiga.</div>
+				   	<div class="r">5. Viteza obstacolelor va creste pe masura ce te apropii mai mult de sfarsit si in functie de numarul de obstacole ales.</div>
+					</div>
+					<div id="box2"><button id="Start">Start</button></div>
+			</div>
+		</div>
+		</div>
+		<div id="PaginaLose">
+				<div id="text">You Lose</div>
+				<button id="RestartWhenLose">Restart</button>
+		</div>
+		<div id="PaginaWin">
+				<div id="text1">You Win</div>
+				<button id="RestartWhenWin">Restart</button>
+		</div>
+		<ul >
+			<li>
+				<p>Numarul de frame-uri per obiect generat (15 - 100) cu pas de 5</p>
+				<input id="RateOfGeneration" type="range" min="15" max="100" step="5" value="30"></input>
+			</li>
+			<li>
+				<p id="p1">Numarul de obstacole intre (300 - 800) cu pas de 50</p>
+				<input id="NumberOfObstacles" type="range" min="300" max="800" step="50" value="300"></input>
+			</li>
+		</ul>
+</body>
+<link rel="stylesheet" href="PageAspect.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+<script src="Platforms.js"></script>
+<script src="Obstacles.js"></script>
+<script src="Player.js"></script>
+<script src="CameraAndScene.js"></script>
+<script src="main.js"></script>
+</html>
